@@ -1,0 +1,17 @@
+<h2>Products</h2>
+<table class="products">
+  <tr>
+    <td>Description</td>
+    <td>Quantity</td>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td>
+      {{product.name}}
+    </td>
+    <td>{{product.quantity}}</td>
+    <td>
+      <button (click)="sell(product)">
+        Sell
+      </button></td>
+  </tr>
+</table>
