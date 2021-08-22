@@ -18,7 +18,12 @@ export class ProductsComponent implements OnInit {
   }
 
   getProducts(): void {
-    this.products = this.productsService.getProducts();
+    this.productsService.getProducts().subscribe(
+      
+      (products) => {
+        console.log(products);
+        this.products = products
+      });
   }
   sell(product: Product): void {
     
